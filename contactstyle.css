@@ -1,0 +1,122 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Nunito", sans-serif;
+}
+
+body {
+    background: #f0f0f0;
+}
+
+img {
+    width: 100%;
+}
+
+a {
+    text-decoration: none;
+}
+
+.card-section {
+
+    display: grid;
+    grid-template-columns: repeat(2, 2fr);
+    gap: 2rem; /* Adjust the value for desired spacing */
+    margin: 5rem; /* Optional: Add margin around the entire grid */
+      
+    
+}
+
+.card {
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 60%;
+    margin: 5rem 10rem;
+    background: #fff;
+    padding: 50px 25px;
+    text-align: center;
+    color: #333;
+    position: relative;
+    box-shadow: 18px 17px 0px -7px rgba(0, 0, 0, 0.1);
+}
+
+.bottom {
+    background: #02d484;
+    color: white;
+    padding: 20px;
+    width: 100px; /* Adjust as needed */
+    cursor: pointer;
+    margin-top: auto; /* Push to the bottom of the card */
+}
+
+.card img {
+    width: 50%;
+    margin: 30px auto;
+}
+
+.card div h4 {
+    margin-top: 10px;
+}
+
+.card div p {
+    margin-bottom: 20px;
+}
+
+.card .images {
+    display: flex;
+    width: 60%;
+    margin: auto;
+    margin-bottom: 40px;
+}
+
+/*.card .images img {
+    margin: 0 10px;
+    border: 1px solid rgba(51, 51, 51, 0.198);
+    padding: 10px;
+    cursor: pointer;
+    transition: 0.5s ease-in-out;
+}
+
+.card .images img:hover {
+    box-shadow: 3px 5px 5px 5px rgba(0, 0, 0, 0.212);
+}*/
+.card .images {
+    display: flex;
+    justify-content: center; /* Center images in the container */
+    flex-wrap: wrap; /* Allow images to wrap on smaller screens */
+}
+
+.card .images img {
+    margin: 0 10px; /* Horizontal margin between images */
+    border: 2px solid rgba(51, 51, 51, 0.3); /* Slightly thicker border */
+    border-radius: 8px; /* Rounded corners for a softer look */
+    padding: 10px; /* Padding inside the border */
+    cursor: pointer; /* Pointer cursor for interaction */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out, border-color 0.3s ease-in-out; /* Smooth transition */
+}
+
+/* Hover effects */
+.card .images img:hover {
+    transform: scale(1.05); /* Slightly scale up on hover */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); /* Enhanced shadow effect */
+    border-color: rgba(51, 51, 51, 0.6); /* Darken border on hover */
+}
+
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .card-section {
+        grid-template-columns: 1fr; /* Stack cards on smaller screens */
+        margin: 2rem 1rem;
+    }
+
+    .card {
+        width: 90%; /* Full width on small screens */
+        margin: 2rem auto; /* Centering */
+    }
+
+    .bottom {
+        width: auto; /* Make button width responsive */
+        padding: 10px; /* Adjust padding */
+    }
+}
